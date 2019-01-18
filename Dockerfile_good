@@ -1,0 +1,6 @@
+FROM alpine
+RUN apk update \
+  && apk add curl \
+  && curl -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.5.4.rpm \
+  && rm elasticsearch-6.5.4.rpm \
+  && rm -rfv /var/cache/apk/
